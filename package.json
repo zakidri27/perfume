@@ -1,0 +1,33 @@
+{
+  "name": "perfume",
+  "version": "1.0.0",
+  "description": "Perfume e-commerce desktop app (Electron + React + SQLite)",
+  "main": "main.js",
+  "scripts": {
+    "dev": "concurrently -k \"vite\" \"wait-on tcp:5173 && set ELECTRON_START_URL=http://localhost:5173&& electron .\"",
+    "build": "vite build",
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^13.0.2",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.20.0",
+      "onFail": "download"
+    }
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.5",
+    "concurrently": "^10.0.4",
+    "electron": "^43.2.0",
+    "vite": "^8.2.0",
+    "wait-on": "^9.1.0"
+  }
+}
